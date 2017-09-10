@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CoreMLHelper.iOS</id>
+    <version>1.0.1-beta</version>
+    <authors>sarthakmahapatra</authors>
+    <owners>sarthakmahapatra</owners>
+    <licenseUrl>https://raw.githubusercontent.com/sarthakmahapatra/CoreMLHelper.iOS/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/sarthakmahapatra/CoreMLHelper.iOS</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CoreMLHelper.iOS</description>
+    <releaseNotes>This is a pre release package</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Xamarin, iOS, Xamarin iOS, CoreMLHelper, CoreML</tags>
+  </metadata>
+</package>
