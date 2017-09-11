@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +10,17 @@
     <RootNamespace>CoreMLHelper.iOS</RootNamespace>
     <AssemblyName>CoreMLHelper.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>CoreMLHelper.iOS</PackageId>
+    <PackageVersion>1.0.1-beta</PackageVersion>
+    <Authors>sarthakmahapatra</Authors>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/sarthakmahapatra/CoreMLHelper.iOS/master/LICENSE.md</PackageLicenseUrl>
+    <Owners>sarthakmahapatra</Owners>
+    <PackageProjectUrl>https://github.com/sarthakmahapatra/CoreMLHelper.iOS</PackageProjectUrl>
+    <PackageReleaseNotes>This is a pre release package</PackageReleaseNotes>
+    <PackageTags>Xamarin, iOS, Xamarin iOS, CoreMLHelper, CoreML</PackageTags>
+    <Title>CoreMLHelper.iOS</Title>
+    <Description>CoreMLHelper.iOS</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,5 +68,9 @@
     <Compile Include="Outputs\CMLHDictionaryPrediction.cs" />
     <Compile Include="Exceptions\CMLHFeatureNotSupportedException.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets')" />
 </Project>
